@@ -2,7 +2,8 @@
 <html>
 <head>
 <title>demo</title>
-
+<script src='//cameratag.com/v14/js/cameratag.js' type='text/javascript'></script>
+<link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'
 </head>
 
 
@@ -11,6 +12,7 @@
 
 <form action="{{url_for('predict')}}" method=post>
 <input type="submit" value="start scanning">
+  <camera id='UNIQUE_ID_FOR_THIS_CAMERA' data-app-id='CAMERATAG_APPLICATION_UUID'></camera>
 </form>
 </body>
 </html>
