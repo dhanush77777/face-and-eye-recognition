@@ -45,6 +45,8 @@ def predict():
         if cv2.waitKey(1) & 0xFF==ord('w'):
             break
     return render_template('index.html')
+    cap.release() 
+    cv2.destroyAllWindows() 
     
 if __name__=='__main__':
     app.run(debug=True)
