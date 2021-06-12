@@ -13,7 +13,7 @@ def home():
 
 @app.route('/predict',methods=['post','get'])
 def predict():
-    cap=cv2.VideoCapture(/dev/video0)
+    cap=cv2.VideoCapture(-1)
 
     while (cap.isOpened()):
         ret,img=cap.read()
@@ -44,7 +44,7 @@ def predict():
 
         cv2.imshow('Face & Eye Detection',img)
 
-        if cv2.waitKey(1) & 0xFF==ord('w'):
+        if cv2.waitKey(1) & 0xFF==ord('q'):
             break
     return render_template('index.html')
     cap.release() 
